@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到  郑越降.com</title>
+    <link rel="icon" href="icon.jpg" type="image/png">
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* 粒子背景层 */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* 让粒子背景在底层 */
+        }
+
+        /* 顶部标题 */
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: none; /* 透明背景，去掉黑色框 */
+        }
+
+        /* 网站 Logo */
+        .logo {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        /* 主要内容（图片） */
+        .container {
+            margin-top: 100px; /* 确保图片不会太靠上 */
+            padding: 20px; /* 增加周围留白 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* 下载按钮 */
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #ff6600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #cc5500;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 粒子背景 -->
+<div id="particles-js"></div>
+
+<!-- 网站 Logo -->
+<img src="icon.jpg" alt="网站Logo" class="logo">
+
+<!-- 置顶标题 -->
+<div class="header">欢迎来到  郑越降.com</div>
+
+<!-- 图片 + 下载按钮 -->
+<div class="container">
+    <img src="photo.jpg" alt="欢迎图片">
+    <a href="photo.jpg" download="photo.png" class="download-btn">下载图片</a>
+</div>
+
+<!-- 引入 particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 100, // 粒子数量
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff" // 粒子颜色
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false
+            },
+            "size": {
+                "value": 3,
+                "random": true
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 2,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                }
+            },
+            "modes": {
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "push": {
+                    "particles_nb": 4
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
+<div class="copyright_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="copyright_text">2025 郑越降.com<a target="_blank" href="https://wsyf24.icu" title="WSY">developed by Wang_SY</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
